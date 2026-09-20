@@ -1,1 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Georgia, serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b0000,
+            #8b0000,
+            #d4142a
+        );
+
+    overflow: hidden;
+}
+
+/* Main card */
+
+.card {
+    position: relative;
+    width: 90%;
+    max-width: 550px;
+
+    padding: 50px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 245, 245, 0.96);
+
+    border: 3px solid #ff4d5a;
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 25px rgba(255, 50, 70, 0.6),
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Tulips above message */
+
+.tulips {
+    font-size: 55px;
+    letter-spacing: 8px;
+    margin-bottom: 15px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Title */
+
+h1 {
+    color: #a50000;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+/* Message */
+
+.message {
+    color: #5a1717;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* Heart */
+
+.heart {
+    color: #d90429;
+    font-size: 35px;
+    margin: 20px 0;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+/* Signature */
+
+.signature {
+    color: #9b111e;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Floating tulips */
+
+.flower {
+    position: absolute;
+
+    font-size: 35px;
+    opacity: 0.7;
+
+    animation: drift 6s ease-in-out infinite;
+}
+
+.flower1 {
+    top: 10%;
+    left: 8%;
+}
+
+.flower2 {
+    top: 20%;
+    right: 8%;
+    animation-delay: 1s;
+}
+
+.flower3 {
+    bottom: 10%;
+    left: 12%;
+    animation-delay: 2s;
+}
+
+.flower4 {
+    bottom: 15%;
+    right: 12%;
+    animation-delay: 3s;
+}
+
+/* Floating animation */
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Heart animation */
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Floating flower animation */
+
+@keyframes drift {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
 
